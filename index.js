@@ -8,10 +8,10 @@ if (!process.env.BOT_TOKEN) {
 
 console.log("--> Fetching taxes")
 TaxFetcher.process().then(taxMap => {
-
     console.log("--> Starting bot")
     bot.startTelegramBot(process.env.BOT_TOKEN, taxMap)
     console.log("--> Started")
 }).catch(error => {
     console.error(error)
+    process.exit(2)
 })

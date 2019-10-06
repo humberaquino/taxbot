@@ -30,14 +30,26 @@ node -v
 npm i
 ```
 
-### 3. (optional) Install nodemon for faster development loop
+### 3. Config .env file
+
+```
+cp .env-sample .env
+```
+
+Then edit `.env` with the right env var values.
+
+### 4. (optional) Install nodemon for faster development loop
 
 ```
 npm install -g nodemon
 ```
 
+```
+./scripts/dev
+```
+
 # Run 
 
 ```
-BOT_TOKEN=XXXXXXXXXX node index.js
+./scripts/run
 ```
